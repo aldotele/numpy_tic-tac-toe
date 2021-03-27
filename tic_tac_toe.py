@@ -31,7 +31,7 @@ while True:
             quit()
     print('available positions: {}'.format(' '.join(free_spots)))
 
-    # check if game ended as tie or player retired
+    # check if game ended as a tie
     if not free_spots:
         print('END GAME: TIE')
         break
@@ -44,7 +44,7 @@ while True:
 
     # ask the input
     spot = input('player {}, enter a position: '.format(player.upper()))
-    # player who retires will loose
+    # entering 'out' will end the game at anytime
     if spot == 'out':
         quit()
     # check if input is valid
